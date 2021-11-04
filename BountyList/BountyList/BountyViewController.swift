@@ -32,6 +32,7 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
 //        cell.nameLabel.text = nameList[indexPath.row]
 //        cell.bountryLabel.text = "\(bountyList[indexPath.row])"
 //        return cell
+        
         // if 구문
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell {
             let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
@@ -48,6 +49,7 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("--> \(indexPath.row)")
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
 
