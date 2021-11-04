@@ -11,8 +11,20 @@ import UIKit
 class BountyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let nameList = ["brook", "chopper", "franky", "luffy", "nami", "robin", "sanji", "zoro"]
-    let bountyList = [3300000, 50, 4400000, 30000000, 16000000, 8000000, 77000000, 120000000]
-
+    let bountyList = [33000000, 50, 44000000, 300000000, 16000000, 80000000, 77000000, 120000000]
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // DetailViewController 데이터 넘기기
+        if segue.identifier == "showDetail" {
+            let vc = segue.destination as? DetailViewController
+            
+            if let index = sender as? Int {
+                vc?.name = nameList[index]
+                vc?.bounty = bountyList[index]
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,7 +50,7 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
             let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
             cell.imgView.image = img
             cell.nameLabel.text = nameList[indexPath.row]
-            cell.bountryLabel.text = "\(bountyList[indexPath.row])"
+            cell.bountyLabel.text = "\(bountyList[indexPath.row])"
             return cell
         } else {
             return UITableViewCell()
@@ -49,7 +61,7 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     // UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("--> \(indexPath.row)")
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 }
 
@@ -58,5 +70,5 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
 class ListCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var bountryLabel: UILabel!
+    @IBOutlet weak var bountyLabel: UILabel!
 }

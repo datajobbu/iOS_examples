@@ -59,7 +59,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bountryLabel" destination="V8A-Ls-eFp" id="mgk-Ux-LW5"/>
+                                            <outlet property="bountyLabel" destination="V8A-Ls-eFp" id="EKh-Px-mOy"/>
                                             <outlet property="imgView" destination="N8W-Ru-Vmk" id="YA0-h1-Cao"/>
                                             <outlet property="nameLabel" destination="IZg-vP-x6R" id="V67-Mz-2DV"/>
                                         </connections>
@@ -102,14 +102,44 @@
                                     <action selector="close:" destination="NsN-mR-wKI" eventType="touchUpInside" id="ozv-qV-onC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DxR-WF-030">
+                                <rect key="frame" x="50" y="100" width="314" height="448.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DxR-WF-030" secondAttribute="height" multiplier="7:10" id="o2N-2q-MnD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-vo-EnR">
+                                <rect key="frame" x="170" y="609" width="74" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64J-LS-P3w">
+                                <rect key="frame" x="137" y="726" width="140" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6aU-y1-DYH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6aU-y1-DYH" firstAttribute="trailing" secondItem="Fk4-3W-2kG" secondAttribute="trailing" constant="55" id="4la-oz-kOH"/>
+                            <constraint firstItem="DxR-WF-030" firstAttribute="centerX" secondItem="6aU-y1-DYH" secondAttribute="centerX" id="CHu-Dm-wde"/>
+                            <constraint firstItem="lmu-vo-EnR" firstAttribute="top" secondItem="DxR-WF-030" secondAttribute="bottom" constant="60.5" id="D6w-IS-fbl"/>
+                            <constraint firstItem="DxR-WF-030" firstAttribute="top" secondItem="6aU-y1-DYH" secondAttribute="top" constant="100" id="I56-wD-PPh"/>
+                            <constraint firstItem="64J-LS-P3w" firstAttribute="top" secondItem="lmu-vo-EnR" secondAttribute="bottom" constant="81" id="cDb-a0-f7B"/>
+                            <constraint firstItem="64J-LS-P3w" firstAttribute="centerX" secondItem="lmu-vo-EnR" secondAttribute="centerX" id="kmh-Kd-cIl"/>
                             <constraint firstItem="Fk4-3W-2kG" firstAttribute="top" secondItem="6aU-y1-DYH" secondAttribute="top" constant="55" id="nMz-X9-7if"/>
+                            <constraint firstItem="lmu-vo-EnR" firstAttribute="centerX" secondItem="DxR-WF-030" secondAttribute="centerX" id="rQb-c4-ZSa"/>
+                            <constraint firstItem="DxR-WF-030" firstAttribute="leading" secondItem="6aU-y1-DYH" secondAttribute="leading" constant="50" id="tTn-Xd-7tZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bountyLabel" destination="64J-LS-P3w" id="Cls-HD-YoN"/>
+                        <outlet property="imgView" destination="DxR-WF-030" id="I8a-ga-RXE"/>
+                        <outlet property="nameLabel" destination="lmu-vo-EnR" id="oHh-jM-cZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEk-F5-hPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
