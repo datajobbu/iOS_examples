@@ -127,7 +127,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64J-LS-P3w">
-                                <rect key="frame" x="137" y="726" width="140" height="36"/>
+                                <rect key="frame" x="137" y="675" width="140" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                             <constraint firstItem="DxR-WF-030" firstAttribute="centerX" secondItem="6aU-y1-DYH" secondAttribute="centerX" id="CHu-Dm-wde"/>
                             <constraint firstItem="lmu-vo-EnR" firstAttribute="top" secondItem="DxR-WF-030" secondAttribute="bottom" constant="60.5" id="D6w-IS-fbl"/>
                             <constraint firstItem="DxR-WF-030" firstAttribute="top" secondItem="6aU-y1-DYH" secondAttribute="top" constant="100" id="I56-wD-PPh"/>
-                            <constraint firstItem="64J-LS-P3w" firstAttribute="top" secondItem="lmu-vo-EnR" secondAttribute="bottom" constant="81" id="cDb-a0-f7B"/>
+                            <constraint firstItem="64J-LS-P3w" firstAttribute="top" secondItem="lmu-vo-EnR" secondAttribute="bottom" constant="30" id="cDb-a0-f7B"/>
                             <constraint firstItem="64J-LS-P3w" firstAttribute="centerX" secondItem="lmu-vo-EnR" secondAttribute="centerX" id="kmh-Kd-cIl"/>
                             <constraint firstItem="Fk4-3W-2kG" firstAttribute="top" secondItem="6aU-y1-DYH" secondAttribute="top" constant="55" id="nMz-X9-7if"/>
                             <constraint firstItem="lmu-vo-EnR" firstAttribute="centerX" secondItem="DxR-WF-030" secondAttribute="centerX" id="rQb-c4-ZSa"/>
@@ -149,8 +149,10 @@
                     </view>
                     <connections>
                         <outlet property="bountyLabel" destination="64J-LS-P3w" id="Cls-HD-YoN"/>
+                        <outlet property="bountyLabelCenterX" destination="kmh-Kd-cIl" id="wIf-2o-c2R"/>
                         <outlet property="imgView" destination="DxR-WF-030" id="I8a-ga-RXE"/>
                         <outlet property="nameLabel" destination="lmu-vo-EnR" id="oHh-jM-cZd"/>
+                        <outlet property="nameLabelCenterX" destination="rQb-c4-ZSa" id="87k-oD-IgI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEk-F5-hPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
