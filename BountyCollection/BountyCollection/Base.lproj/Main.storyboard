@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Jp-up-DmF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridCell" id="6Jp-up-DmF" customClass="GridCell" customModule="BountyCollection" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0ea-Zx-df3">
@@ -64,6 +64,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="350"/>
+                                        <connections>
+                                            <outlet property="bountyLabel" destination="9Xe-bK-AD5" id="1Hc-Tx-kbL"/>
+                                            <outlet property="imgView" destination="GYh-3r-aJE" id="zVS-Ev-9gp"/>
+                                            <outlet property="nameLabel" destination="wVr-pB-YF5" id="g9V-sP-zTF"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
