@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BA26E6C2734C99F006C961D /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA26E6B2734C99F006C961D /* BountyInfo.swift */; };
 		5BC8F4D62733706C00085791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8F4D52733706C00085791 /* AppDelegate.swift */; };
 		5BC8F4D82733706C00085791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8F4D72733706C00085791 /* SceneDelegate.swift */; };
 		5BC8F4DD2733706C00085791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8F4DB2733706C00085791 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BA26E6B2734C99F006C961D /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 		5BC8F4D22733706C00085791 /* BountyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BountyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8F4D52733706C00085791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC8F4D72733706C00085791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				5BC8F4D72733706C00085791 /* SceneDelegate.swift */,
 				5BC8F4DB2733706C00085791 /* Main.storyboard */,
 				5BC8F4E92733710A00085791 /* BountyViewController.swift */,
+				5BA26E6B2734C99F006C961D /* BountyInfo.swift */,
 				5BC8F4EB2733986C00085791 /* DetailViewController.swift */,
 				5BC8F4DE2733706E00085791 /* Assets.xcassets */,
 				5BC8F4E02733706E00085791 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA26E6C2734C99F006C961D /* BountyInfo.swift in Sources */,
 				5BC8F4D62733706C00085791 /* AppDelegate.swift in Sources */,
 				5BC8F4EA2733710A00085791 /* BountyViewController.swift in Sources */,
 				5BC8F4D82733706C00085791 /* SceneDelegate.swift in Sources */,
@@ -293,6 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W9VHCBGGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BountyList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,6 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8W9VHCBGGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BountyList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

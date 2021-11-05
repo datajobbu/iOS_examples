@@ -9,12 +9,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    // MVVM
+    
+    // Model
+    // - BountyInfo
+    
+    // View
+    // - imgView, nameLabel, bountyLabel
+    // > view 들은 viewmodel을 통해서 구성
+    
+    // ViewModel
+    // - DetailViewModel
+    
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
     
-    var name: String?
-    var bounty: Int?
+    let viewModel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +33,10 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
-        if let name = self.name, let bounty = self.bounty {
-            let img = UIImage(named: "\(name).jpg")
-            imgView.image = img
-            nameLabel.text = name
-            bountyLabel.text = "\(bounty)"
+        if let bountyInfo = self.viewModel.bountyInfo {
+            imgView.image = bountyInfo.image
+            nameLabel.text = bountyInfo.name
+            bountyLabel.text = "\(bountyInfo.bounty)"
         }
     }
     
@@ -34,4 +44,13 @@ class DetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+
+class DetailViewModel {
+    var bountyInfo: BountyInfo?
+    
+    func update(model: BountyInfo?) {
+        bountyInfo = model
+    }
 }
